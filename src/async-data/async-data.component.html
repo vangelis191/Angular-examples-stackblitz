@@ -1,0 +1,25 @@
+<h2>Asynchronous Data</h2>
+<ng-container *ngIf="productsAsync$ | async as data; else NoContent">
+  <ng-container *ngFor="let product of data">
+    <div class="product">
+      <h2>{{ product.title }}</h2>
+      <p>Description: {{ product.description }}</p>
+      <p>Price: ${{ product.price }}</p>
+    </div>
+  </ng-container>
+</ng-container>
+
+<ng-template #NoContent>
+  Loading...
+</ng-template>
+
+<div >
+  <div>
+    <div>
+      <h2>Synchronous Text</h2>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,</p>  
+    </div>
+  </div>
+</div>
+
+

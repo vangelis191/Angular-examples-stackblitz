@@ -1,0 +1,12 @@
+<h2>First Way</h2>
+<input [(ngModel)]="message" placeholder="Enter a message">
+<p>You entered: {{ message }}</p>
+
+
+<h2>Second Way</h2>
+<input [ngModel]="message2" (ngModelChange)="message2 = $event" name="myInput" placeholder="Enter a message 2">
+<p>You entered: {{ message2 }}</p>
+
+<h2>Third Way</h2>
+<input [ngModel]="message3" (ngModelChange)="onMessageChange($event)" name="myInput" placeholder="Enter a message 3">
+<p>You entered: {{ message3 }}</p>
